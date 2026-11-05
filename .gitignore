@@ -1,0 +1,44 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Java / Maven
+**/target/
+*.class
+
+# Node / frontend
+**/node_modules/
+**/dist/
+**/dist-ssr/
+
+# Uploaded passport documents and private storage
+.private-documents/
+private-documents/
+passport-documents/
+uploads/
+
+# Logs
+*.log
+logs/
+
+# IDE and operating system files
+.idea/
+.vscode/
+.DS_Store
+*.iml
+
+# Local runtime files
+*.pid
+*.seed
+
+# Local source backups
+*.backup
+*.bak
+
+# Local source backups
+*.backup
+*.bak
