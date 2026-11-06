@@ -1399,7 +1399,7 @@ if (existingApplication) {
                                 value={
                                   application.applicationStatus === 'ACTION_REQUIRED'
                                     ? (application.requestedDocumentType ?? '')
-                                    : (selectedDocumentTypes[application.id] ?? 'BIRTH_CERTIFICATE')
+                                    : (selectedDocumentTypes[application.id] ?? '')
                                 }
                                 disabled={application.applicationStatus === 'ACTION_REQUIRED'}
                                 onChange={(event) =>
