@@ -1417,10 +1417,11 @@ if (existingApplication) {
                                   )
                                 ) : (
                                   <>
+                                    <option value="">Select a document</option>
                                     <option value="BIRTH_CERTIFICATE">Birth certificate</option>
-                                    <option value="NATIONAL_ID">National ID</option>
+                                    <option value="NATIONAL_ID">Expired ID</option>
                                     <option value="PROOF_OF_CITIZENSHIP">
-                                      Proof of citizenship
+                                      Parent's ID
                                     </option>
                                     <option value="PASSPORT_PHOTO">Passport photograph</option>
                                     <option value="SUPPORTING_DOCUMENT">
