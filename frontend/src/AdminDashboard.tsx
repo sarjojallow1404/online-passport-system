@@ -469,6 +469,19 @@ export default function AdminDashboard({ applicant, onLogout }: Props) {
         </aside>
 
         <div className="admin-main-content">
+          <nav className="admin-breadcrumb" aria-label="Breadcrumb">
+            <ol className="admin-breadcrumb-list">
+              <li>
+                <button type="button" onClick={() => setActiveView('visuals')}>
+                  Dashboard
+                </button>
+              </li>
+              <li className="breadcrumb-separator" aria-hidden="true">/</li>
+              <li aria-current="page">
+                {activeView === 'visuals' ? 'Visuals' : 'Applications'}
+              </li>
+            </ol>
+          </nav>
           {error && (
             <div role="alert" style={{ ...styles.panel, color: '#a11b1b' }}>
               {error}

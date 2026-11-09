@@ -110,3 +110,58 @@
     font-size: 12px;
   }
 }
+
+/* Admin breadcrumb navigation */
+.admin-breadcrumb {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 18px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.admin-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.admin-breadcrumb-list button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #64748b;
+  font: inherit;
+  cursor: pointer;
+}
+
+.admin-breadcrumb-list button:hover {
+  color: #174ea6;
+  text-decoration: underline;
+}
+
+.admin-breadcrumb-list li[aria-current="page"] {
+  color: #182230;
+  font-weight: 700;
+}
+
+.admin-breadcrumb-list .breadcrumb-separator {
+  color: #94a3b8;
+}
+
+@media (max-width: 480px) {
+  .admin-breadcrumb {
+    margin-bottom: 14px;
+  }
+
+  .admin-breadcrumb-list {
+    gap: 7px;
+    font-size: 12px;
+  }
+}

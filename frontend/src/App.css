@@ -1541,3 +1541,58 @@
     margin-left: 0;
   }
 }
+
+/* Applicant breadcrumb navigation */
+.applicant-breadcrumb {
+  width: 100%;
+  min-width: 0;
+  margin: 0 0 18px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.applicant-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #89959e;
+  font-size: 13px;
+}
+
+.applicant-breadcrumb-list button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #536875;
+  font: inherit;
+  cursor: pointer;
+}
+
+.applicant-breadcrumb-list button:hover {
+  color: #17634f;
+  text-decoration: underline;
+}
+
+.applicant-breadcrumb-list li[aria-current="page"] {
+  color: #17634f;
+  font-weight: 700;
+}
+
+.applicant-breadcrumb-list .breadcrumb-separator {
+  color: #aab5bc;
+}
+
+@media (max-width: 480px) {
+  .applicant-breadcrumb {
+    margin-bottom: 14px;
+  }
+
+  .applicant-breadcrumb-list {
+    gap: 7px;
+    font-size: 12px;
+  }
+}

@@ -829,6 +829,45 @@ if (existingApplication) {
       </aside>
 
   <div className="applicant-dashboard-main">
+    <nav className="applicant-breadcrumb" aria-label="Breadcrumb">
+      <ol className="applicant-breadcrumb-list">
+        <li>
+          <button
+            type="button"
+            onClick={() => {
+              setDashboardSection('my-application')
+              setActiveStep(0)
+            }}
+          >
+            Dashboard
+          </button>
+        </li>
+        <li className="breadcrumb-separator" aria-hidden="true">/</li>
+
+        {dashboardSection === 'track-application' ? (
+          <li aria-current="page">Track Application</li>
+        ) : (
+          <>
+            <li>
+              <button type="button" onClick={() => setActiveStep(0)}>
+                My Application
+              </button>
+            </li>
+
+            {activeStep >= 1 && activeStep <= 3 && (
+              <>
+                <li className="breadcrumb-separator" aria-hidden="true">/</li>
+                <li aria-current="page">
+                  {activeStep === 1 && 'Applicant Profile'}
+                  {activeStep === 2 && 'Upload Documents'}
+                  {activeStep === 3 && 'Review & Submit'}
+                </li>
+              </>
+            )}
+          </>
+        )}
+      </ol>
+    </nav>
     {dashboardSection === 'my-application' ? (
       <>
         <section className="passport-workflow" aria-label="Passport application steps">
